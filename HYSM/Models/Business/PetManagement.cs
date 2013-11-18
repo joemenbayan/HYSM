@@ -55,5 +55,10 @@ namespace HYSM.Models.Business
                 
             }
         }
+
+        internal static object GetByName(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

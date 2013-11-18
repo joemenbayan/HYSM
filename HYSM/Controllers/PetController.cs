@@ -79,7 +79,7 @@ namespace HYSM.Controllers
         [AllowAnonymous]
         public ActionResult GetPet(int id)
         {
-
+            return View();
         }
     }
 }
