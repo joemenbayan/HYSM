@@ -81,5 +81,13 @@ namespace HYSM.Controllers
         {
             return View();
         }
+
+        public ActionResult GetPhoto()
+        {
+            var name = (string)RouteData.Values["id"];
+            ViewBag.Photo = string.Format("/Content/Uploads/{0}.jpg", name);
+
+            return PartialView();
+        }
     }
 }

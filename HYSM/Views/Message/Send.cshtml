@@ -67,6 +67,23 @@
     Sending Message...
 </div>
 
+<div id="petPhoto">
+    @Ajax.ActionLink("Display pet picture", "GetPhoto", "Pet",
+        new RouteValueDictionary { {"id", ViewBag.PetName } },
+        new AjaxOptions
+            {
+                HttpMethod = "Post",
+                InsertionMode = InsertionMode.Replace,
+                LoadingElementId = "loadingPhoto",
+                UpdateTargetId = "petPhoto"
+            })
+</div>
+<div id="loadingPhoto" style="display: none">
+    Loading Pet...
+</div>
+
+<img src="@ViewBag.Photo" style="width: 150px; height: 120px" />
+
 @*<div>
     @Html.ActionLink("Back to List", "Index")
 </div>*@

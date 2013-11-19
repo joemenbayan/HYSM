@@ -14,6 +14,9 @@ namespace HYSM.Controllers
 
         public ActionResult Send()
         {
+            var name = (string)RouteData.Values["id"];
+            ViewBag.PetName = name;
+            ViewBag.IsSent = false;
             return View();
         }
 
